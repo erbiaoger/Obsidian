@@ -1,0 +1,38 @@
+local M = {}
+
+M.general = {
+  n = {
+    [";"] = { ":", "command mode", opts = { nowait = true } },
+    ["<C-u>"] = {"<cmd> MarkdownPreview <CR>", "MarkdownPreview", opts = {nowait = true} },
+    ["J"] = {"5j", "J", opts = {nowait = true} },
+    ["K"] = {"5k", "K", opts = {nowait = true} },
+    ["Y"] = {"\"+y", "Y", opts = {nowait = true} },
+    ["P"] = {"\"+p", "Y", opts = {nowait = true} },
+    ["H"] = {"^", "H", opts = {nowait = true} },
+    ["L"] = {"$", "L", opts = {nowait = true} },
+    ["T"] = {":term<CR>", "T", opts = {nowait = true} },
+    ["T"] = {":tabnew<CR>", "T", opts = {nowait = true} },
+    
+
+
+  },
+
+  i = {
+    --["jj"] = {"<ESC>", "ESC", opts={noremap = true} },
+    ["jo"] = {"<ESC>o", "jo", opts={noremap = true} },
+    ["jm"] = {"<++>", "jm", opts={noremap = true} },
+    ["j["] = {"{} <++><ESC>F}i", "j{", opts={noremap = true} },
+    ["jf"] = {"<ESC>//<++><CR>:nohlsearch<CR>c4l", "jf", opts={noremap = true} },
+    ["jF"] = {"<ESC>//<++><CR>N:nohlsearch<CR>c4l", "jF", opts={noremap = true} },
+    ["jd"] = {"\\partial{}<++><Esc>F}i", "jd", opts={noremap = true} },
+    ["jD"] = {"\\mathrm{} <++><Esc>F}i", "jD", opts={noremap = true} },
+    ["jb"] = {"\\mathbf{}<++><Esc>F}i", "jD", opts={noremap = true} },
+    ["jh"] = {"$$$$<Esc>hi", "jD", opts={noremap = true} },
+    ["j-"] = {"\\frac{}{<++>} <++><Esc>Fc2li", "jD", opts={noremap = true} },
+   },
+}
+-- map <C-s> <Plug>MarkdownPreview
+-- nmap <M-s> <Plug>MarkdownPreviewStop
+
+
+return M
